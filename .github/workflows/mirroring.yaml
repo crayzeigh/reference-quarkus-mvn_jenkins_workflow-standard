@@ -1,0 +1,15 @@
+name: Mirroring to Gitea
+
+on: [push, delete]
+
+jobs:
+  to_gitea:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - uses: spyoungtech/mirror-action@master
+      with:
+        # replace REMOTE with your gitea remote
+        REMOTE: https://gitea-tssc.apps.ftehp08f.eastus.aroapp.io/platform/reference-quarkus-mvn_jenkins_workflow-standard.git
+        GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+        GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
