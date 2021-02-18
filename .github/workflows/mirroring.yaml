@@ -10,6 +10,6 @@ jobs:
     - uses: spyoungtech/mirror-action@master
       with:
         # replace REMOTE with your gitea remote
-        REMOTE: https://gitea-tssc.apps.ftehp08f.eastus.aroapp.io/platform/reference-quarkus-mvn_jenkins_workflow-standard.git
+        REMOTE: http://gitea-devsecops.apps.ut6tqqyk.eastus2.aroapp.io/platform/reference-quarkus-mvn_jenkins_workflow-standard.git 
         GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
         GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
